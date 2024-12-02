@@ -1,7 +1,6 @@
 require "event_stream_parser"
 
 require_relative "http_headers"
-require 'pry'
 
 module OpenAI
   module HTTP
