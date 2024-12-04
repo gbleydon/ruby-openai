@@ -537,9 +537,9 @@ Hit the OpenAI API for a completion using other GPT-3 models:
 ```ruby
 response = client.completions(
   parameters: {
-    model: "gpt-4o",
-    prompt: "Once upon a time",
-    max_tokens: 5
+    model: "gpt-4o", # Required.
+    messages: [{ role: "user", content: "Once upon a time"}], # Required.
+    temperature: 0.7
   }
 )
 puts response["choices"].map { |c| c["text"] }
